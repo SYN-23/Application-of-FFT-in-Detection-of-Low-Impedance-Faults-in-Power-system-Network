@@ -1,0 +1,20 @@
+
+load C:\Users\sayan\Desktop\km10\phaseA.txt;
+load C:\Users\sayan\Desktop\km10\phaseB.txt;
+load C:\Users\sayan\Desktop\km10\phaseC.txt;
+yA = abs(fft(phaseA));
+ypeakA = max(abs(yA));
+yB = abs(fft(phaseB));
+ypeakB = max(abs(yB));
+yC = abs(fft(phaseC));
+ypeakC = max(abs(yC));
+
+fid1 = fopen('C:\Users\sayan\Desktop\projectoutput\pkA.txt','a');
+ fprintf(fid1,'%f \n',ypeakA);
+      fclose(fid1);
+ fid2 = fopen('C:\Users\sayan\Desktop\projectoutput\pkB.txt','a');
+ fprintf(fid2,'%f \n',ypeakB);
+      fclose(fid2);
+  fid3 = fopen('C:\Users\sayan\Desktop\projectoutput\pkC.txt','a');
+ fprintf(fid3,'%f \n',ypeakC);
+      fclose(fid3);
